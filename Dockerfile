@@ -1,8 +1,10 @@
-FROM bayesimpact/react-base
+FROM node:latest
 
-WORKDIR /app
+RUN mkdir -p /app/src
 
-COPY package*.json .
+WORKDIR /app/src
+
+COPY package.json .
 
 RUN npm install
 
